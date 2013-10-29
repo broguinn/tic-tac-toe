@@ -77,7 +77,7 @@ describe("TicTacToe", function() {
     });
 
     describe("findWin", function() {
-      it("returns the location of a horizontal win", function() {  
+      it("returns the location of a horizontal win", function() {
         game = Object.create(Game);
         game.initialize();
         game.table.playTurn(0, 0, "X");
@@ -169,7 +169,7 @@ describe("TicTacToe", function() {
         table.playTurn(2, 2, "O");
         table.isEmpty(2, 2).should.be.false;
       });
-    }); 
+    });
   });
 
   describe("ComputerLogic", function() {
@@ -238,15 +238,3 @@ describe("TicTacToe", function() {
     });
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-

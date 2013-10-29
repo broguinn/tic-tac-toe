@@ -156,7 +156,7 @@ $(function() {
     if (game.table.playTurn(row, column, player)) {
       $(this).append(player);
       playTurn();
-      
+
       if (!winner && !catsGame) {
         // computer turn
         game.computerLogic.joinMove([row, column], false);
@@ -164,7 +164,7 @@ $(function() {
         $("tr[value*=" + computerMove[0] + "]").children("td[value*=" + computerMove[1] + "]").append(game.currentPlayer());
         game.computerLogic.joinMove(computerMove, true);
         game.table.playTurn(computerMove[0], computerMove[1], game.currentPlayer());
-        
+
         playTurn();
       }
     }
@@ -178,14 +178,6 @@ $(function() {
     $(".player").empty().append("<h2>" + game.currentPlayer() + "'s turn</h2>");
   })
 });
-
-// FIX: find if player wins in 2+ directions at once
-// FIX: fadeToggle or other slow method of adding computer's move
-// FIX: computer selects random best move
-// FIX: computer doesn't always play second
-// FIX: user can play against human OR computer
-
-
 
 /*
 -------------
